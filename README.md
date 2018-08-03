@@ -1,2 +1,2 @@
 # nodular
-Node.js and Angular 6 application
+Node.js and Angular 6 application with Material Design 
