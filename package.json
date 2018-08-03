@@ -1,0 +1,23 @@
+{
+  "name": "nodular",
+  "version": "1.0.0",
+  "description": "Node.js and Angular 6 application",
+  "main": "server.js",
+  "scripts": {
+    "test": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinrkirby/nodular.git"
+  },
+  "author": "Kevin Kirby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinrkirby/nodular/issues"
+  },
+  "homepage": "https://github.com/kevinrkirby/nodular#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3"
+  }
+}
