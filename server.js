@@ -6,12 +6,10 @@ const bodyParser = require('body-parser');
 app.use (bodyParser.json());
 app.use (bodyParser.urlencoded({ extended: false }));
 app.use (express.static(path.join(__dirname , 'frontend/dist/frontend')));
-require('./routes.js');//(app.path);
-require('./listen.js');//(http);
-
-var server = http.listen(3000, "127.0.0.1", function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log("My First Nodejs Server!");
-    console.log("Server listening on: http://"+ host +":" + port);
-  });
+// ### CATCH REFRESH TO INDEX ###
+app.all('/*', function(req, res, next) {
+  // Just send the index.html for other files to support HTML5Mode
+  res.sendFile('frontend/dist/frontend/index.html', { root: __dirname });
+});
+require('./routes.js')(app.path);
+require('./listen.js')(http);

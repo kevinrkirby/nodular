@@ -1,2 +1,3 @@
-const express = require('express');
-const app = express();
+module.exports = function(app,path) {
+    console.log('routes started');
+}
