@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const bodyParser = require('body-parser');
 app.use (bodyParser.json());
 app.use (bodyParser.urlencoded({ extended: false }));
@@ -13,3 +14,4 @@ app.all('/*', function(req, res, next) {
 });
 require('./routes.js')(app.path);
 require('./listen.js')(http);
+require('./socket.js')(app, io);
