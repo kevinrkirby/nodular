@@ -2,7 +2,7 @@ module.exports  = function (app, io) {
     console.log('Server Socket Initilaised');
     // respond to connection request
     io.on('connection', (socket) => {
-        console.log('user conncetion');
+        console.log('user connection');
 
         // respond to the disconnect request
         socket.on('disconnect', function() {
